@@ -44,15 +44,29 @@ Using easysse-client
 API
 ---
 
+* **connect**(path) &mdash; connect to an EventSource at the specified `path`
+  and automatically calls `start`
+
+* **start**() &mdash; start listening to the `eventSource`
+
+* **stop**() &mdash; stop listening to the `eventSource`
+
 * **on**(eventType, cb) &mdash; add an event listener of
   `eventType`.
+
+  `cb` receives any args sent by `emit`
 
   (*alias* `addEventListener`)
 
 * **off**(eventType, cb) &mdash; remove an event listener of
   `eventType`.
 
-  (*alias* `addEventListener`)
+  (*alias* `removeEventListener`)
+
+* **emit**(eventType[, arg1, arg2, ..., argN]) &mdash; emit an event of
+  `eventType`; Sends any arguments to listener callback functions.
+
+  (*alias* `dispatchEvent`)
 
 
 Compatibility
@@ -60,6 +74,16 @@ Compatibility
 
 Tested on Chrome 33
 Please submit any other compatibility reports
+
+
+Building
+--------
+
+To minify the source, please run
+
+```text
+$ npm run-script build
+```
 
 
 License
