@@ -1,0 +1,27 @@
+{
+  "name": "easysse-client",
+  "version": "0.0.0",
+  "description": "Listen to Server-Sent Events sincerely, most definitely",
+  "main": "easysse-client.js",
+  "scripts": {
+    "test": "echo no tests available yet && exit 1",
+    "build": "cat easysse-client.js | uglifyjs -m -c > ./easysse-client.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mosdefbiz/easysse-client.git"
+  },
+  "keywords": [
+    "sse",
+    "json"
+  ],
+  "author": "nkitsune <nkitsune@mosdef.biz>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/mosdefbiz/easysse-client/issues"
+  },
+  "homepage": "https://github.com/mosdefbiz/easysse-client",
+  "devDependencies": {
+    "uglify-js": "^2.4.12"
+  }
+}
